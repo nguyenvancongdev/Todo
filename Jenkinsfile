@@ -12,9 +12,9 @@ pipeline {
             steps {
                 container('docker') {
                    sh '''
-                   docker build -t nguyenvancongdev/automation-iops:${BUILD_NUMBER} `pwd`
+                   docker build -t nguyenvancongdev/todo:${BUILD_NUMBER} `pwd`
                    docker login --username=$Docker_Hub_USR --password=$Docker_Hub_PSW
-                   docker push nguyenvancongdev/automation-iops:${BUILD_NUMBER}
+                   docker push nguyenvancongdev/todo:${BUILD_NUMBER}
                    '''
                 }    
             }
