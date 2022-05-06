@@ -7,7 +7,7 @@ pipeline {
     stages {
          stage('Docker Build & Push Image') {
              environment {
-                 Docker_Hub = credentials('docker-hub1')
+                 Docker_Hub = credentials('docker-hub')
              }
             steps {
                 container('docker') {
